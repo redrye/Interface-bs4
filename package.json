@@ -2,6 +2,7 @@
     "private": true,
     "devDependencies": {
         "@babel/plugin-proposal-class-properties": "^7.13.0",
+        "@vue/compiler-sfc": "^3.0.11",
         "axios": "^0.21.1",
         "bootstrap": "^4.6.0",
         "cross-env": "^7.0.3",
@@ -11,7 +12,10 @@
         "postcss": "^8.3.0",
         "resolve-url-loader": "^2.3.2",
         "sass": "^1.34.0",
-        "sass-loader": "^8.0.0"
+        "sass-loader": "^8.0.0",
+        "vue": "^3.0.11",
+        "vue-loader": "^16.2.0",
+        "vue-template-compiler": "^2.6.13"
     },
     "dependencies": {
         "@amcharts/amcharts4": "^4.10.18",
@@ -23,10 +27,17 @@
         "@fullcalendar/interaction": "^5.7.0",
         "@fullcalendar/timegrid": "^5.7.0",
         "bootstrap4": "0.0.1-security",
+        "bootstrap5": "^1.1.9",
+        "codemirror": "^5.61.1",
+        "datatables": "^1.10.18",
         "datatables.net-bs4": "^1.10.24",
+        "datatables.net-bs5": "^1.10.25",
         "datatables.net-buttons-bs4": "^1.7.0",
+        "datatables.net-buttons-bs5": "^1.7.1",
         "datatables.net-dt": "^1.10.24",
         "datatables.net-responsive-bs4": "^2.2.7",
+        "datatables.net-responsive-bs5": "^2.2.8",
+        "datatables.net-searchpanes-bs5": "^1.3.0",
         "datatables.net-select-bs4": "^1.3.2",
         "dotenv": "^9.0.2",
         "dotenv-webpack": "^7.0.2",
