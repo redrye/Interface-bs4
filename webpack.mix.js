@@ -33,8 +33,3 @@ mix.webpackConfig({
 mix.sass('resources/sass/bootstrap.scss', 'public/css');
 
 mix.js('resources/js/app.js', 'public/js').extract();
-
-mix.js('resources/js/sync-address.js', 'public/js');
-mix.js('resources/js/jobdash-ro.js', 'public/js');
-mix.js('resources/js/statecountry.js', 'public/js');
-
