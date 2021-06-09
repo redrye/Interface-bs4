@@ -1,0 +1,131 @@
+@import '~bootstrap/scss/variables';
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret:                                true;
+$enable-rounded:                              true;
+$enable-shadows:                              false;
+$enable-gradients:                            false;
+$enable-transitions:                          true;
+$enable-prefers-reduced-motion-media-query:   true;
+$enable-hover-media-query:                    false; // Deprecated, no longer affects any compiled CSS
+$enable-grid-classes:                         true;
+$enable-pointer-cursor-for-buttons:           true;
+$enable-print-styles:                         true;
+$enable-responsive-font-sizes:                true;
+$enable-validation-icons:                     true;
+$enable-deprecation-messages:                 true;
+
+
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+/* same for line-height-sm */
+$line-height-xs: 1.5;
+
+/*$border-radius:               .25rem !default;*/
+$border-radius: 0rem;
+$border-radius-lg: 0rem;
+$border-radius-sm: 0rem;
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+
+$font-size-xs: ($font-size-base * .750);
+
+
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y-xs: .25rem;
+$input-btn-padding-x-xs: .25rem;
+$input-btn-line-height-xs: $line-height-xs;
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y-xs: $input-btn-padding-y-xs;
+$btn-padding-x-xs: $input-btn-padding-x-xs;
+$btn-line-height-xs: $input-btn-line-height-xs;
+
+$btn-border-radius-xs: $border-radius-sm;
+
+
+// Forms
+
+$input-bg: $dark;
+$input-disabled-bg: $gray-200;
+
+$input-color: $gray-200;
+$input-border-color: $gray-400;
+$input-border-width: $input-btn-border-width;
+
+$input-group-addon-color: $input-color;
+$input-group-addon-bg: $input-bg;
+$input-group-addon-border-color: $input-border-color;
+
+
+$pagination-color: $white;
+$pagination-bg: $gray-700;
+$pagination-border-width: $border-width;
+$pagination-border-color: $gray-700;
+
+$pagination-hover-color: $gray-300;
+$pagination-hover-bg: $gray-900;
+$pagination-hover-border-color: $gray-900;
+
+$pagination-active-color: $component-active-color;
+$pagination-active-bg: $component-active-bg;
+$pagination-active-border-color: $pagination-active-bg;
+
+$pagination-disabled-color: $gray-600;
+$pagination-disabled-bg: $gray-700;
+$pagination-disabled-border-color: $gray-700;
+
+$custom-select-padding-y: .375rem;
+$custom-select-padding-x: .75rem;
+$custom-select-height: $input-height;
+$custom-select-indicator-padding: 1rem; // Extra padding to account for the presence of the background-image based indicator
+$custom-select-line-height: $input-btn-line-height;
+$custom-select-color: $input-color;
+$custom-select-disabled-color: $gray-700;
+$custom-select-bg: $gray-800;
+$custom-select-disabled-bg: $gray-200;
+$custom-select-bg-size: 8px 10px; // In pixels because image dimensions
+$custom-select-indicator-color: $gray-200;
+$custom-select-indicator: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23");
+$custom-select-border-width: $input-btn-border-width;
+$custom-select-border-color: $input-border-color;
+$custom-select-border-radius: $border-radius;
+
+$custom-select-focus-border-color: $input-focus-border-color;
+$custom-select-focus-box-shadow: inset 0 1px 2px rgba($black, .075), 0 0 5px rgba($custom-select-focus-border-color, .5);
+
+$custom-select-font-size-sm: 75%;
+$custom-select-height-sm: $input-height-sm;
+
+$custom-select-font-size-lg: 125%;
+$custom-select-height-lg: $input-height-lg;
+
+// Dashboard
+$dashboard-card-visibility: hidden;
+$dashboard-card-display: none;
+

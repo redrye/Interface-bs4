@@ -1,0 +1,33 @@
+@import '~bootstrap/scss/forms';
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Textual form controls
+//
+
+.form-control {
+	@include font-size($font-size-xs);
+	line-height: $input-line-height;
+	color: $input-color;
+	background-color: $input-bg;
+	border-radius: 0px;
+}
+
+
+// Make file inputs better match text inputs by forcing them to new lines.
+.form-control-file,
+.form-control-range {
+	display: block;
+	width: 100%;
+}
+
+
+.cost-form {
+	display: none;
+}
+
+.date-form {
+	margin-bottom: 0px;
+}
+
+

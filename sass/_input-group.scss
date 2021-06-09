@@ -1,0 +1,179 @@
+@import "~bootstrap/scss/input-group";
+
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Base styles
+//
+
+
+.select2-container-multiple {
+//	width: 100% !important;
+}
+
+.select2-default {
+	width: 100% !important;
+}
+
+.select2-input {
+	width: 100% !important;
+}
+
+
+
+.select2 {
+	width: 100% !important;
+}
+
+.select2-search {
+	width: 100% !important;
+}
+
+.select2-search__field {
+	width: 100% !important;
+}
+
+.select2-selection__choice {
+	background-color: #32383e !important;
+	color: #F3F9FF;
+	float: none !important;
+}
+
+.select2-results {
+	.select2-result-label {
+		padding-left: 2px;
+	}
+}
+
+.select2-drop {
+	@include font-size(11px);
+}
+
+.select2-choices {
+	@include font-size(11px);
+}
+
+.raw-data {
+	.select2-drop {
+		@include font-size(9px);
+	}
+
+	.select2-choices {
+		@include font-size(9px);
+	}
+}
+.date-select {
+	height: 28px;
+}
+
+input[type="checkbox"].blog-sidebar {
+	margin-top: 4px;
+}
+
+
+#date_range-2 {
+	text-align: left !important;
+}
+
+
+#ui-datepicker-div {
+	z-index: 10 !important;
+}
+
+
+.ui-slider-range {
+	.inuse {
+		background-color: #F3F9FF !important;
+	}
+}
+
+select.input-sm {
+	height: 28px;
+	margin-left: 2px;
+	margin-right: 2px;
+	padding: 5px 12px;
+}
+
+
+.filter-reset {
+	margin: 1px 0px 0px 0px;
+}
+
+
+#jobs_filter {
+	text-align: left;
+}
+
+#trucks_filter {
+	text-align: left;
+}
+
+#contacts_filter {
+	text-align: left;
+}
+
+#data_filter {
+	text-align: left;
+}
+
+#job-history_filter {
+	text-align: left;
+}
+
+#issue-history_filter {
+	text-align: left;
+}
+
+.yadcf-filter-range-number-slider {
+	.inuse {
+		background-color: #F3F9FF !important;
+	}
+}
+
+
+.yadcf-filter {
+	width: inherit;
+}
+
+#yadcf-filter-wrapper-date_range {
+	margin-bottom: 3px;
+	margin-top: 4px;
+}
+#yadcf-filter-wrapper-date_range-2 {
+	margin-bottom: 3px;
+	margin-top: 4px;
+}
+
+.yadcf-filter-wrapper-inner {
+	white-space: normal;
+	border: 0px;
+}
+
+.yadcf-filter-range-date {
+	width: inherit;
+	margin-bottom: 9px;
+}
+
+#yadcf-filter-wrapper-date_range {
+	margin-bottom: 5px;
+}
+#yadcf-filter-wrapper-date_range-2 {
+	margin-bottom: 5px;
+}
+
+
+
+
+/*.cost-field-wrapper {
+	width: 75px;
+	display: inline-block;
+	margin-right: 10px;
+}*/
+
+.cost-field {
+	width: 100% !important;
+}
+
+.cost-group {
+	min-width: 109px;
+}

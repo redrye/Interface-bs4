@@ -1,0 +1,26 @@
+.app {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	min-height: 100vh;
+
+}
+
+
+// IE10&11 Flexbox fix
+@media all and (-ms-high-contrast: none) {
+	html {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.app-main {
+	flex-basis: auto;
+	flex-shrink: 0;
+	flex-grow: 1;
+	min-width: 0;
+	padding-top: 2 * $spacer;
+
+}

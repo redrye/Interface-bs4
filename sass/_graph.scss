@@ -1,0 +1,60 @@
+
+.ratio-graph {
+	height: 150px;
+}
+
+.sensor-graph {
+	width: 100%;
+	height: 500px;
+}
+
+#stepline-chart {
+	width: 100%;
+	height: 500px;
+	margin-bottom: -50px;
+}
+
+.sum-graph {
+	height: 100px;
+}
+
+.pie-graph {
+	height: 150px;
+	overflow: visible !important;
+}
+
+#total-graph {
+	height: 145px;
+}
+
+.pie-container {
+	margin-left: -10px;
+}
+
+.chart-table {
+	margin-top: 50px;
+}
+
+.chart {
+	margin-bottom: 50px;
+}
+
+.chart-label {
+	vertical-align: bottom;
+	margin-right: 10px;
+	width: 28px;
+	height: 21px;
+}
+
+.chart-badge-text {
+	@include font-size(14px);
+	color: #000000;
+}
+
+.amcharts-main-div {
+	overflow: visible !important;
+}
+
+.amcharts-chart-div {
+	overflow: visible !important;
+}

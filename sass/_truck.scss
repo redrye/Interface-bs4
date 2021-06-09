@@ -1,0 +1,82 @@
+.tire-issue {
+	margin-top: 20px;
+}
+
+
+.truck-status {
+	text-align: right;
+	@include font-size(18px);
+	margin-top: -1px;
+	margin-left: -30px;
+}
+
+.truck-title {
+	@include font-size(20px);
+}
+
+.truck-info {
+	margin-top: 10px;
+	margin-bottom: 7px;
+}
+
+.spin-icon {
+	@include font-size(20px);
+	color: darkgray;
+}
+
+.light-spin-icon {
+	@include font-size(20px);
+	color: #ededed;
+}
+
+.truck-actions {
+	margin-top: 5px;
+}
+
+.truck-layer {
+	width: 100%;
+}
+
+.color-layer {
+	width: 100%;
+	z-index: 10;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.back-tire {
+	height: 15%;
+}
+
+.front-tire {
+	height: 25%;
+}
+
+#eng {
+	height: 50%;
+}
+
+.space {
+	height: 40%;
+}
+
+.cp {
+	width: 14.1%;
+	height: 100%;
+}
+
+.danger-bg {
+	background-color: rgba(217, 83, 79, 0.8) !important;
+}
+
+.warning-bg {
+	background-color: rgba(240, 196, 71, 0.8) !important;
+}
+
+.good-bg {
+	background-color: rgba(92, 184, 92, 0.8) !important;
+}
+
+/*.message-new {
+	background-color: rgb(254, 255, 144) !important;
+}*/

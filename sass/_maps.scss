@@ -1,0 +1,80 @@
+button.gm-ui-hover-effect {
+	background-color: #FFFFFF !important;
+	border-radius: 100% !important;
+	top: 2px !important;
+	right: 2px !important;
+	width: 16px !important;
+	height: 16px !important;
+
+	img {
+		margin: 1px !important;
+	}
+
+}
+
+.gm-style .gm-style-iw-c {
+	background-color: $dark !important;
+	overflow: visible !important;
+	display: flex !important;
+	padding: 0 !important;
+
+
+}
+
+.gm-style-iw .gm-style-iw-c {
+	background-color: $dark !important;
+	overflow: visible !important;
+	padding: 0 !important;
+	transform: translate(-50%, 110%);
+
+	> .gm-style-iw-d {
+		overflow: visible !important;
+		display: flex !important;
+	}
+}
+
+.gm-style-iw-d {
+	overflow: visible !important;
+}
+
+#map-info {
+	position: relative;
+	top: 422px;
+	left: 7px;
+	z-index: 100;
+	padding: 10px;
+	background: rgba(43, 41, 41, 0.73);
+	color: white;
+	width: max-content;
+	margin-top: -21px;
+	margin-bottom: -20px;
+}
+
+
+#job-map-block {
+	height: 450px;
+	padding: 0 0;
+}
+
+#truck-map-block {
+	height: 450px;
+	padding: 0 0;
+}
+
+#map {
+	height: calc(100vh - 15vmax) !important;
+	padding: 0 0;
+}
+
+#map-area-block {
+	height: 700px;
+	padding: 0 0;
+}
+
+#map-loading-overlay {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.60);
+	bottom: 450px;
+	height: 450px;
+	margin-bottom: -450px;
+}

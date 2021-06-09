@@ -1,0 +1,420 @@
+@import "~bootstrap/scss/images";
+
+th {
+	vertical-align: top;
+}
+td {
+	vertical-align: middle;
+}
+
+.table {
+	width: 100% !important;
+	max-width: 100%;
+	margin-bottom: $spacer;
+	background-color: $table-bg; // Reset for nesting within parents with `background-color`.
+
+	th,
+	td {
+		padding: $table-cell-padding;
+		border-top: $table-border-width solid $table-border-color;
+	}
+
+	thead th {
+		vertical-align: bottom;
+		border-bottom: (2 * $table-border-width) solid $table-border-color;
+	}
+
+	tbody + tbody {
+		border-top: (2 * $table-border-width) solid $table-border-color;
+	}
+
+	.table {
+		background-color: $body-bg;
+	}
+}
+
+
+//
+// Condensed table w/ half padding
+//
+
+.table-sm {
+	th,
+	td {
+		padding: $table-cell-padding-sm;
+	}
+}
+
+
+// Bordered version
+//
+// Add borders all around the table and between all the columns.
+
+.table-bordered {
+	border: $table-border-width solid $table-border-color;
+
+	th,
+	td {
+		border: $table-border-width solid $table-border-color;
+	}
+
+	thead {
+		th,
+		td {
+			border-bottom-width: (2 * $table-border-width);
+		}
+	}
+}
+
+
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+
+.table-striped {
+	tbody tr:nth-of-type(odd) {
+		background-color: $table-accent-bg;
+	}
+}
+
+
+// Hover effect
+//
+// Placed here since it has to come after the potential zebra striping
+
+.table-hover {
+	tbody tr {
+		@include hover {
+			background-color: $table-hover-bg;
+		}
+	}
+}
+
+
+// Table backgrounds
+//
+// Exact selectors below required to override `.table-striped` and prevent
+// inheritance to nested tables.
+
+@each $color, $value in $theme-colors {
+	@include table-row-variant($color, theme-color-level($color, -9));
+}
+
+@include table-row-variant(active, $table-active-bg);
+
+
+// Dark styles
+//
+// Same table markup, but inverted color scheme: dark background and light text.
+
+// stylelint-disable-next-line no-duplicate-selectors
+.table {
+	.thead-dark {
+		th {
+			color: $table-dark-color;
+			background-color: $table-dark-bg;
+			border-color: $table-dark-border-color;
+			vertical-align: middle !important;
+			text-align: center !important;
+		}
+	}
+
+	.thead-light {
+		th {
+			color: $table-head-color;
+			background-color: $table-head-bg;
+			border-color: $table-border-color;
+			vertical-align: middle !important;
+			text-align: center !important;
+		}
+	}
+}
+
+.table-dark {
+	color: $table-dark-color;
+	background-color: $table-dark-bg;
+
+	th,
+	td:not(.child),
+	thead th {
+		border-color: $table-dark-border-color;
+		vertical-align: middle !important;
+		text-align: center !important;
+
+	}
+
+	&.table-bordered {
+		border: 0;
+	}
+
+	&.table-striped {
+		tbody tr:nth-of-type(odd) {
+			background-color: $table-dark-accent-bg;
+		}
+	}
+
+	&.table-hover {
+		tbody tr {
+			@include hover {
+				background-color: $table-dark-hover-bg;
+			}
+		}
+	}
+}
+
+
+// Responsive tables
+//
+// Generate series of `.table-responsive-*` classes for configuring the screen
+// size of where your table will overflow.
+
+.table-responsive {
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		$next: breakpoint-next($breakpoint, $grid-breakpoints);
+		$infix: breakpoint-infix($next, $grid-breakpoints);
+
+		&#{$infix} {
+			@include media-breakpoint-down($breakpoint) {
+				display: block;
+				width: 100%;
+				overflow-x: auto;
+				-webkit-overflow-scrolling: touch;
+				-ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
+
+				// Prevent double border on horizontal scroll due to use of `display: block;`
+				> .table-bordered {
+					border: 0;
+				}
+			}
+		}
+	}
+}
+
+.info-box-table {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	/*
+	overflow-x: hidden;
+	*/
+	table {
+		display: flex;
+		border-collapse: collapse;
+		flex-direction: row;
+	}
+
+	thead, tbody {
+		display: flex;
+		flex-grow: 1;
+	}
+	/*thead {
+		justify-content: flex-start;
+	}
+	*/
+
+
+	tr {
+		display: inline-flex;
+		flex-direction: column;
+		width: 100%;
+		flex-shrink: 1;
+
+		th {
+			display: flex !important;
+		}
+
+		th:first-child, td:first-child {
+			border-top: 2px solid $gray-100 !important;
+		}
+
+		th:last-child {
+			flex-grow: 1;
+			border-bottom: 2px solid $gray-100 !important;
+		}
+
+		td:last-child {
+			border-bottom: 2px solid $gray-100 !important;
+		}
+	}
+	th, td {
+		display: table-cell !important;
+		color: #dee2e6;
+		border-bottom: 1px solid $gray-100 !important;
+		width: 80% !important;
+	}
+	th {
+		&:before {
+			right: 0;
+			content: '' !important;
+		}
+		&:after {
+			right: 0;
+			content: '' !important;
+		}
+	}
+
+
+}
+
+div.dataTables_processing {
+	background-color: rgba(0, 0, 0, 0.56);
+	width: 100% !important;
+	left: inherit !important;
+	margin-left: -15px !important;
+	margin-right: inherit !important;
+	margin-top: inherit !important;
+	margin-bottom: inherit !important;
+	top: 0 !important;
+	height: 100%;
+	padding-top: 60px !important;
+	color: white;
+	@include font-size(20px);
+}
+
+.card-table {
+	padding-bottom: 5px;
+}
+
+table.dataTable.dtr-inline.collapsed {
+	> tbody {
+		> tr {
+			> td {
+				&:first-child {
+					&:before {
+						text-indent: 4px;
+						line-height: 19px;
+						@include font-size(16px);
+						border-radius: 17px;
+						height: 17px;
+						width: 17px;
+				//		top: 6px;
+					}
+				}
+			}
+
+			> th {
+				&:first-child {
+					&:before {
+						text-indent: 4px;
+						line-height: 19px;
+						@include font-size(16px);
+						border-radius: 17px;
+						height: 17px;
+						width: 17px;
+						top: 6px;
+					}
+				}
+			}
+		}
+	}
+}
+#tableCalViewToggle {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+#jobs-table_filter {
+	text-align: left;
+}
+
+.dataTables_wrapper {
+	margin-bottom: 2px;
+}
+
+.dataTables_length {
+	margin-top: 6px;
+	text-align: center;
+}
+
+.dataTables_filter {
+	> label {
+		> input {
+			border-radius: 0;
+			padding: 8px 12px;
+			width: inherit !important;
+			@include font-size(12px);
+			line-height: 1.5;
+			color: #555;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+			-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+			-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+			transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+		}
+	}
+}
+
+.yadcf-filter-range-date {
+	border-radius: 0;
+	padding: 8px 12px;
+	width: inherit !important;
+	@include font-size(12px);
+	line-height: 1.5;
+	color: #555;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+	&:focus {
+		border-color: #66afe9;
+		outline: 0;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+	}
+}
+
+.yadcf-filter-reset-button {
+	background-color: $gray-700;
+	color: $white;
+	&:hover {
+		color: #333;
+		background-color: #e6e6e6;
+		border-color: #adadad;
+	}
+}
+
+.yadcf-filter-range-date-seperator {
+	margin-left: 5px !important;
+	margin-right: 5px !important;
+}
+
+table.dataTable {
+	thead {
+		> tr {
+			> th.sorting_asc {
+				padding-right: 25px;
+			}
+
+			> th.sorting_desc {
+				padding-right: 25px;
+			}
+
+			> th.sorting {
+				padding-right: 25px;
+			}
+
+			> td.sorting_asc {
+				padding-right: 25px;
+			}
+
+			> td.sorting_desc {
+				padding-right: 25px;
+			}
+
+			> td.sorting {
+				padding-right: 25px;
+			}
+		}
+	}
+}
+
+.table-small {
+	display: none;
+}
