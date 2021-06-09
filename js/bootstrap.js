@@ -18,9 +18,7 @@ try {
 		require('bs4-summernote');
 	*/
 	window.JSZip = require('jszip');
-	require('./smartgunite');
 	require('./dashboard');
-	require('./elements');
 } catch (e) {
 	console.log(e);
 }
