@@ -11,6 +11,7 @@ var Breadcrumb = $.extend(pathElement, {
 	},
 
 	pushPath: function (element) {
+		
 		if (Array.isArray(element)) {
 			for (var i = 0; i < element.length; i++) {
 				this.push(element[i]);
