@@ -1,4 +1,4 @@
-@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/tables";
 
 th {
 	vertical-align: top;
@@ -15,7 +15,7 @@ td {
 
 	th,
 	td {
-		padding: $table-cell-padding;
+		padding: $table-cell-padding-sm;
 		border-top: $table-border-width solid $table-border-color;
 	}
 
